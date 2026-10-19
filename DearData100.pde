@@ -1,35 +1,37 @@
-// Dear Data 100 - Phone Pickups
-// One circle for every time I picked up my phone.
+// Dear Data 100 - everything I eat and drink
+// Green = I cooked it, red = I bought it, blue = someone gave me it.
+// Bigger circle = cost more. Ring = I regretted it.
 
-Table table;
-Pickup[] pickups;
+ArrayList<Meal> meals;
 
 void setup() {
   size(900, 600);
 
-  table = loadTable("pickups.csv", "header");
-  pickups = new Pickup[table.getRowCount()];
+  meals = new ArrayList<Meal>();
 
-  for (int i = 0; i < table.getRowCount(); i++) {
-    TableRow row = table.getRow(i);
+  String[] lines = loadStrings("meals.csv");
 
-    pickups[i] = new Pickup(
-      row.getString("trigger"),
-      row.getInt("length"),
-      row.getInt("after")
-    );
+  // start at 1 so we skip the header row
+  for (int i = 1; i < lines.length; i++) {
+    String[] tokens = split(lines[i], ',');
+
+    String place = tokens[2];
+    float cost = float(tokens[4]);
+    int after = int(tokens[5]);
+
+    meals.add(new Meal(place, cost, after));
   }
 
-  println("Loaded " + pickups.length + " pickups");
+  println("Loaded " + meals.size() + " meals");
 }
 
 void draw() {
   background(245, 243, 238);
 
-  // 10 circles per row, in the order they happened
-  for (int i = 0; i < pickups.length; i++) {
-    float x = 90 + (i % 10) * 80;
-    float y = 90 + (i / 10) * 55;
-    pickups[i].display(x, y);
+  for (int i = 0; i < meals.size(); i++) {
+    float x = 90 + (i % 10) * 80;   // 10 across
+    float y = 90 + (i / 10) * 55;   // then start a new line
+
+    meals.get(i).draw(x, y);
   }
 }
