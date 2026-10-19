@@ -1,6 +1,6 @@
 // Dear Data 100 - everything I eat and drink
 // Green = I cooked it, red = I bought it, blue = someone gave me it.
-// Bigger circle = cost more. Ring = I regretted it.
+// Bigger circle = cost more. Ring = it was a treat.
 
 ArrayList<Meal> meals;
 
@@ -16,10 +16,10 @@ void setup() {
     String[] tokens = split(lines[i], ',');
 
     String place = tokens[2];
+    String kind = tokens[3];
     float cost = float(tokens[4]);
-    int after = int(tokens[5]);
 
-    meals.add(new Meal(place, cost, after));
+    meals.add(new Meal(place, kind, cost));
   }
 
   println("Loaded " + meals.size() + " meals");

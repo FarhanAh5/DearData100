@@ -3,13 +3,13 @@
 class Meal {
 
   String place;   // C cooked, B bought, G given
+  String kind;    // M meal, S snack, D cold drink, H hot drink, T treat
   float cost;     // roughly what it cost me
-  int after;      // 1 glad, 0 fine, -1 regret
 
-  Meal(String place, float cost, int after) {
+  Meal(String place, String kind, float cost) {
     this.place = place;
+    this.kind = kind;
     this.cost = cost;
-    this.after = after;
   }
 
   // home food is green, bought food is red, free food is blue
@@ -33,8 +33,8 @@ class Meal {
     fill(colour());
     circle(x, y, dotSize());
 
-    // a ring round the ones I regretted
-    if (after < 0) {
+    // a ring round the treats
+    if (kind.equals("T")) {
       noFill();
       stroke(60);
       circle(x, y, dotSize() + 8);

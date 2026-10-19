@@ -8,16 +8,16 @@ Every meal, snack, coffee, bottle of water - all of it. One line per thing.
 ## The line
 
 ```
-date,time,place,kind,cost,after
+date,time,place,kind,cost
 ```
 
 Like this:
 
 ```
-19/10,13:20,B,M,8.50,1
+19/10,13:30,B,S,7
 ```
 
-That's a meal I bought on the 19th at 1:20pm, cost me £8.50, and I was glad I had it.
+That's a snack I bought on the 19th at 1:30pm, cost me £7.
 
 ## What the letters mean
 
@@ -36,12 +36,6 @@ That's a meal I bought on the 19th at 1:20pm, cost me £8.50, and I was glad I h
 - `T` treat
 
 **cost** - roughly what I paid. `0` if it was free or from home.
-
-**after** - how I felt after
-
-- `1` glad I had it
-- `0` fine, nothing either way
-- `-1` regret
 
 ## Rules I'm sticking to
 
