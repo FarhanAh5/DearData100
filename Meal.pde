@@ -3,7 +3,7 @@
 class Meal {
 
   String place;   // C cooked, B bought, G given
-  String kind;    // M meal, S snack, D cold drink, H hot drink, T treat
+  String kind;    // M meal, S snack, D cold drink, H hot drink
   float cost;     // roughly what it cost me
 
   Meal(String place, String kind, float cost) {
@@ -32,12 +32,5 @@ class Meal {
     noStroke();
     fill(colour());
     circle(x, y, dotSize());
-
-    // a ring round the treats
-    if (kind.equals("T")) {
-      noFill();
-      stroke(60);
-      circle(x, y, dotSize() + 8);
-    }
   }
 }

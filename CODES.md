@@ -33,7 +33,6 @@ That's a snack I bought on the 19th at 1:30pm, cost me £7.
 - `S` snack
 - `D` cold drink
 - `H` hot drink
-- `T` treat
 
 **cost** - roughly what I paid. `0` if it was free or from home.
 

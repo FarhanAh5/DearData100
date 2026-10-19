@@ -14,7 +14,6 @@ Every circle is one thing I ate or drank.
 - red = I bought it
 - blue = someone gave it to me
 - bigger circle = cost more
-- ring round it = it was a treat
 
 ## Files
 
