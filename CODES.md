@@ -47,3 +47,12 @@ That's a snack I bought on the 19th at 1:30pm, cost me £7.
 
 25 by the Week 5 check-in, 100 by 5 November. That's about 7 a day, which is roughly
 what I eat and drink anyway.
+
+## A change I made partway through
+
+I started on 19th Oct recording only meals and snacks. After a few days I realised I was
+missing a big part of what I actually have in a day, so from 22 October I started counting
+drinks as well: water, tea, coffee, all of it.
+
+So the rows before 22 October have no `D` or `H` lines in them. I left those days as they
+are rather than guessing.
