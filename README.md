@@ -1,4 +1,4 @@
-﻿# Dear Data 100 - Eating In vs Eating Out
+# Dear Data 100 - Eating In vs Eating Out
 
 My Dear Data 100 project for IN1007 Creative Coding.
 

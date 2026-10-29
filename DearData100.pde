@@ -1,4 +1,4 @@
-﻿// Dear Data 100 - everything I eat and drink
+// Dear Data 100 - everything I eat and drink
 // Green = I cooked it, red = I bought it, blue = someone gave me it.
 // Bigger circle = cost more.
 
